@@ -91,19 +91,19 @@ namespace ListIp
             var nbIpOK = false;
 
             // Teste si les champs sont remplis et converti en int
-            if (!string.IsNullOrEmpty(tb_IPBase.Text))
+            if (!string.IsNullOrEmpty(_textBoxIpBase.Text))
             {
-                _ipBase = tb_IPBase.Text;
+                _ipBase = _textBoxIpBase.Text;
                 baseOK = true;
             }
 
             string s_error;
-            if (!string.IsNullOrEmpty(tb_IPmin.Text))
+            if (!string.IsNullOrEmpty(_textBoxIpMin.Text))
             {
                 // Teste si le champ IP min est un int
                 try
                 {
-                    _ipMin = Convert.ToInt32(tb_IPmin.Text);
+                    _ipMin = Convert.ToInt32(_textBoxIpMin.Text);
                     minOK = true;
                 }
                 // Affiche une erreur sinon
@@ -111,17 +111,17 @@ namespace ListIp
                 {
                     s_error = $"{Environment.NewLine}Valeur d'IP min incorrecte.";
                     MessageBox.Show($"{ex.Message}{s_error}");
-                    tb_IPmin.Focus();
+                    _textBoxIpMin.Focus();
                     minOK = false;
                 }
             }
 
-            if (!string.IsNullOrEmpty(tb_NbIP.Text))
+            if (!string.IsNullOrEmpty(_textBoxNumberOfIp.Text))
             {
                 // Teste si le champ nombre d'IP est un int
                 try
                 {
-                    _numberOfIp = Convert.ToInt32(tb_NbIP.Text);
+                    _numberOfIp = Convert.ToInt32(_textBoxNumberOfIp.Text);
                     nbIpOK = true;
                 }
                 // Affiche une erreur sinon
@@ -129,19 +129,19 @@ namespace ListIp
                 {
                     s_error = $"{Environment.NewLine}Valeur de nombre d'IP incorrecte.";
                     MessageBox.Show($"{ex.Message}{s_error}");
-                    tb_NbIP.Focus();
+                    _textBoxNumberOfIp.Focus();
                     nbIpOK = false;
                 }
 
                 // Si pas de nombre d'IP précisé
                 if (_numberOfIp == 0)
                 {
-                    if (!string.IsNullOrEmpty(tb_IPmax.Text))
+                    if (!string.IsNullOrEmpty(_textBoxIpMax.Text))
                     {
                         // Teste si le champ IP max est un int
                         try
                         {
-                            _ipMax = Convert.ToInt32(tb_IPmax.Text);
+                            _ipMax = Convert.ToInt32(_textBoxIpMax.Text);
                             maxOK = true;
                         }
                         // Affiche une erreur sinon
@@ -149,7 +149,7 @@ namespace ListIp
                         {
                             s_error = $"{Environment.NewLine}Valeur d'IP max incorrecte.";
                             MessageBox.Show($"{ex.Message}{s_error}");
-                            tb_IPmax.Focus();
+                            _textBoxIpMax.Focus();
                             maxOK = false;
                         }
                     }
@@ -335,7 +335,7 @@ namespace ListIp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btn_startListing.PerformClick();
+                _buttonStartListing.PerformClick();
             }
         }
 
@@ -348,7 +348,7 @@ namespace ListIp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btn_startListing.PerformClick();
+                _buttonStartListing.PerformClick();
             }
         }
 
@@ -361,7 +361,7 @@ namespace ListIp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btn_startListing.PerformClick();
+                _buttonStartListing.PerformClick();
             }
         }
 
@@ -375,7 +375,7 @@ namespace ListIp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btn_startListing.PerformClick();
+                _buttonStartListing.PerformClick();
             }
         }
 
