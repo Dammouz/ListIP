@@ -1,2 +1,2 @@
 # ListIP
-An old project replace by the existing tool Angry IP Scanner
+An old project replaced by the existing tool Angry IP Scanner
